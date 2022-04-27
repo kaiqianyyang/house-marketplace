@@ -94,12 +94,12 @@ function CreateListing() {
       const response = await fetch(
         // `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${process.env.REACT_APP_GEOCODE_API_KEY}`
         // API_KEY=1464460052555b4bd2bfefce3107d85e
-        `http://api.positionstack.com/v1/forward?access_key=1464460052555b4bd2bfefce3107d85e&query=${address}`
+        `https://api.positionstack.com/v1/forward?access_key=1464460052555b4bd2bfefce3107d85e&query=${address}`
       );
 
-    //   console.log("location 111:");
+      //   console.log("location 111:");
       const data = await response.json();
-        // console.log(data);
+      // console.log(data);
 
       //   geolocation.lat = data.results[0]?.geometry.location.lat ?? 0;
       //   geolocation.lng = data.results[0]?.geometry.location.lng ?? 0;
@@ -177,6 +177,7 @@ function CreateListing() {
       geolocation,
       timestamp: serverTimestamp(),
     };
+    console.log(formDataCopy)
 
     formDataCopy.location = address;
     delete formDataCopy.images;
@@ -201,6 +202,7 @@ function CreateListing() {
 
     // Files
     if (e.target.files) {
+      console.log(1)
       setFormData((prevState) => ({
         ...prevState,
         images: e.target.files,
