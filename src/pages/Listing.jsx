@@ -132,10 +132,11 @@ function Listing() {
           <li>{listing.furnished && 'Furnished'}</li>
         </ul>
 
-        <p className="listingLocationTitle">Location</p>
 
         {/* MAP */}
 
+        {/*
+        <p className="listingLocationTitle">Location</p>
         <div className="leafletContainer">
           <MapContainer
             style={{ height: '100%', width: '100%' }}
@@ -152,7 +153,7 @@ function Listing() {
               <Popup>{listing.location}</Popup>
             </Marker>
           </MapContainer>
-        </div>
+        </div> */}
 
         {auth.currentUser?.uid !== listing.userRef && (
           <Link
