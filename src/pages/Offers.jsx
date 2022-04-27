@@ -14,7 +14,7 @@ import { toast } from "react-toastify";
 import Spinner from "../components/Spinner";
 import ListingItem from "../components/ListingItem";
 
-function Category() {
+function Offers() {
   const [listings, setListings] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -85,4 +85,4 @@ function Category() {
   )
 }
 
-export default Category;
+export default Offers;
